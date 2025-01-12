@@ -24,8 +24,8 @@ const Hero = () => {
 
         <div className="mt-4 sm:mt-6">
           <a
-            href="/resume.pdf" // Path to the resume file
-            download="Wimukthi Gunarathna Resume.pdf"
+            href="/Sadini_Wanniarachchi.pdf" // Path to the resume file
+            download="Sadini Wanniarachchi Resume.pdf"
             className="inline-flex items-center bg-gradient-to-r from-purple-600 to-indigo-500 text-white px-2 py-2 sm:px-4 sm:py-3 md:px-6 md:py-4 rounded-full text-xs sm:text-sm md:text-lg font-semibold shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out"
           >
             My Resume
