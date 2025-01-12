@@ -20,7 +20,7 @@ const Contact = () => {
           href="https://www.linkedin.com/in/sadini-tharindi-wanniarachchi-3b0159258/"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-4 bg-black/70 hover:bg-black/80 transition-all duration-300 p-4 rounded-lg shadow-md w-full sm:w-auto"
+          className="flex items-center gap-4 bg-black/70 hover:bg-gray-600 transition-all duration-300 p-4 rounded-lg shadow-md w-full sm:w-auto"
         >
           <FaLinkedin size={30} className="text-blue-400" />
           <span className="text-lg">LinkedIn</span>
@@ -31,7 +31,7 @@ const Contact = () => {
           href="https://github.com/SadiniWanniarachchi"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-4 bg-black/70 hover:bg-black/80 transition-all duration-300 p-4 rounded-lg shadow-md w-full sm:w-auto"
+          className="flex items-center gap-4 bg-black/70 hover:bg-gray-600 transition-all duration-300 p-4 rounded-lg shadow-md w-full sm:w-auto"
         >
           <FaGithub size={30} className="text-gray-300" />
           <span className="text-lg">GitHub</span>
