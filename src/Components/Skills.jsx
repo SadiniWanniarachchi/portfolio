@@ -25,21 +25,30 @@ const skills = [
 const Skills = () => {
   return (
     <section id="skills" className="bg-black py-20 px-4 font-serif">
-      <h2 className="text-4xl font-bold text-center text-white mb-12">Skills</h2>
+      {/* Section Title */}
+      <h2 className="text-3xl sm:text-4xl font-bold text-center text-white mb-12">
+        Skills
+      </h2>
+
+      {/* Skills Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
         {skills.map((skill, index) => (
           <div
             key={index}
-            className="relative group flex flex-col items-center justify-center bg-white/10 backdrop-blur-md border border-white/20 shadow-2xl rounded-2xl p-8 transition-transform duration-300 transform hover:-translate-y-2 hover:bg-white/20"
+            className="relative group flex flex-col items-center justify-center bg-white/10 backdrop-blur-md border border-white/20 shadow-2xl rounded-2xl p-6 sm:p-8 transition-transform duration-300 transform hover:-translate-y-2 hover:bg-white/20"
           >
-            <div className="text-6xl mb-4 group-hover:text-white">
+            {/* Skill Icon */}
+            <div className="text-5xl sm:text-6xl mb-4 group-hover:text-white">
               {skill.icon}
             </div>
-            <p className="text-lg font-bold text-white group-hover:text-gray-300">
+
+            {/* Skill Name */}
+            <p className="text-sm sm:text-lg font-bold text-white group-hover:text-gray-300">
               {skill.name}
             </p>
-            <div className="absolute inset-0 bg-purple-800 opacity-0 group-hover:opacity-10 rounded-2xl"></div>
 
+            {/* Hover Overlay */}
+            <div className="absolute inset-0 bg-purple-800 opacity-0 group-hover:opacity-10 rounded-2xl"></div>
           </div>
         ))}
       </div>

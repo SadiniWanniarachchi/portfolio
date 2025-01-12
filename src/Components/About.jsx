@@ -6,7 +6,7 @@ const About = () => {
       {/* NightSky Background */}
       
       {/* Content Section */}
-      <div className="relative z-10 bg-white/10 backdrop-blur-md p-8 rounded-2xl shadow-xl border border-white/20 max-w-5xl mx-auto mt-24">
+      <div className="relative z-10 bg-white/10 backdrop-blur-md p-8 rounded-2xl shadow-xl border border-white/20 max-w-5xl mx-auto mt-24 sm:p-6 md:p-10">
         <h2 className="text-4xl text-white text-center font-extrabold mb-12 mt-2 text-transparent bg-clip-text bg-gradient-to-r from-black to-[#310b58]">
           About Me
         </h2>
