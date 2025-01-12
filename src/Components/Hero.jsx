@@ -48,7 +48,7 @@ const Hero = () => {
       </div>
 
       {/* Image Section */}
-      <div className="absolute top-1/2 right-5 md:right-10 lg:right-60 transform -translate-y-1/2 max-w-[80%] sm:max-w-md hidden md:block">
+      <div className="absolute top-1/2 right-5 md:right-10 lg:right-60 transform -translate-y-1/2 max-w-[80%] sm:max-w-md w-full md:block">
         <img
           src={Img}
           alt="Profile Illustration"
