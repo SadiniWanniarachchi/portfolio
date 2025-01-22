@@ -1,48 +1,92 @@
-import React from 'react';
-import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
+import React from "react";
+import { FaPhoneAlt, FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Contact = () => {
   return (
     <section
       id="contact"
-      className="bg-gradient-to-b from-[#0e0d0d] to-[#434343] text-white py-16 px-6 font-serif"
+      className="bg-[#0b1120] text-white py-16 px-6 font-serif"
     >
       {/* Section Title */}
-      <h2 className="text-4xl font-bold text-center mb-8">Contact Me</h2>
-      <p className="text-center text-gray-300 mb-12">
-        Feel free to connect with me through any of the platforms below!
-      </p>
-
-      {/* Contact Links */}
-      <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
-        {/* LinkedIn */}
-        <a
-          href="https://www.linkedin.com/in/sadini-tharindi-wanniarachchi-3b0159258/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-4 bg-black/70 hover:bg-gray-600 transition-all duration-300 p-4 rounded-lg shadow-md w-full sm:w-auto"
-        >
-          <FaLinkedin size={30} className="text-blue-400" />
-          <span className="text-lg">LinkedIn</span>
-        </a>
-
-        {/* GitHub */}
-        <a
-          href="https://github.com/SadiniWanniarachchi"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-4 bg-black/70 hover:bg-gray-600 transition-all duration-300 p-4 rounded-lg shadow-md w-full sm:w-auto"
-        >
-          <FaGithub size={30} className="text-gray-300" />
-          <span className="text-lg">GitHub</span>
-        </a>
-
+      <div className="text-center mb-12">
+        
+        <h2 className="text-4xl font-bold">Contact Me</h2>
+        <p className="text-gray-400 mt-2 text-xl">
+          Get in touch with me. You can either call, email directly, or send a
+          message.
+        </p>
       </div>
 
-      {/* Footer Note */}
-      <p className="mt-12 text-center text-white text-sm">
-        © {new Date().getFullYear()} Sadini Wanniaracchchi. All rights reserved.
-      </p>
+      {/* Contact Options */}
+      <div className="flex flex-wrap justify-center gap-8 mb-12">
+        {/* Call Me */}
+        <div className="flex flex-col items-center text-gray-400 hover:scale-110 hover:text-white transition-transform duration-300">
+          <FaPhoneAlt size={24} className="text-blue-500 mb-2" />
+          <p>Call Me</p>
+        </div>
+        {/* Email Me */}
+        <div className="flex flex-col items-center text-gray-400 hover:scale-110 hover:text-white transition-transform duration-300">
+          <FaEnvelope size={24} className="text-blue-500 mb-2" />
+          <p>Email Me</p>
+        </div>
+        {/* GitHub */}
+        <div className="flex flex-col items-center text-gray-400 hover:scale-110 hover:text-white transition-transform duration-300">
+          <FaGithub size={24} className="text-blue-500 mb-2" />
+          <p>GitHub</p>
+        </div>
+        {/* LinkedIn */}
+        <div className="flex flex-col items-center text-gray-400 hover:scale-110 hover:text-white transition-transform duration-300">
+          <FaLinkedin size={24} className="text-blue-500 mb-2" />
+          <p>LinkedIn</p>
+        </div>
+      </div>
+
+      {/* Contact Form */}
+      <div className="max-w-lg mx-auto">
+        <form className="space-y-6">
+          <div>
+            <label htmlFor="name" className="block text-sm font-medium mb-2">
+              Name
+            </label>
+            <input
+              type="text"
+              id="name"
+              className="w-full p-3 bg-[#0d121d] border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Your Name"
+            />
+          </div>
+          <div>
+            <label htmlFor="email" className="block text-sm font-medium mb-2">
+              Email
+            </label>
+            <input
+              type="email"
+              id="email"
+              className="w-full p-3 bg-[#0d121d] border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Your Email"
+            />
+          </div>
+          <div>
+            <label htmlFor="message" className="block text-sm font-medium mb-2">
+              Message
+            </label>
+            <textarea
+              id="message"
+              rows="5"
+              className="w-full p-3 bg-[#0d121d] border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Your Message"
+            ></textarea>
+          </div>
+          <div className="text-center">
+            <button
+              type="submit"
+              className="px-6 py-3 bg-blue-500 text-white font-medium rounded-lg hover:bg-blue-600 transition-all duration-300"
+            >
+              Send Message
+            </button>
+          </div>
+        </form>
+      </div>
     </section>
   );
 };

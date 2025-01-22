@@ -4,7 +4,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-black text-white relative shadow-2xl font-serif py-3">
+    <nav className="bg-[#0b1120] text-white relative shadow-2xl font-serif py-3">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
         {/* Mobile Menu Button */}
         <div className="md:hidden">
@@ -48,20 +48,20 @@ const Navbar = () => {
 
         {/* Navbar Links for Desktop - Centered */}
         <div className="hidden md:flex justify-center w-full space-x-14 text-xl">
-          <a href="#home" className="hover:text-purple-600">Home</a>
-          <a href="#projects" className="hover:text-purple-600">Projects</a>
-          <a href="#skills" className="hover:text-purple-600">Skills</a>
-          <a href="#contact" className="hover:text-purple-600">Contact</a>
+          <a href="#about" className="hover:text-blue-500">About Me</a>
+          <a href="#projects" className="hover:text-blue-500">Projects</a>
+          <a href="#skills" className="hover:text-blue-500">Skills</a>
+          <a href="#contact" className="hover:text-blue-500">Contact</a>
         </div>
       </div>
 
       {/* Mobile Menu Links */}
       <div className={`md:hidden ${isOpen ? "block" : "hidden"}`}>
         <div className="bg-black text-white px-4 pb-4 space-y-2">
-          <a href="#home" className="block hover:text-purple-600">Home</a>
-          <a href="#projects" className="block hover:text-purple-600">Projects</a>
-          <a href="#skills" className="block hover:text-purple-600">Skills</a>
-          <a href="#contact" className="block hover:text-purple-600">Contact</a>
+          <a href="#about" className="block hover:text-blue-500">About Me</a>
+          <a href="#projects" className="block hover:text-blue-500">Projects</a>
+          <a href="#skills" className="block hover:text-blue-500">Skills</a>
+          <a href="#contact" className="block hover:text-blue-500">Contact</a>
         </div>
       </div>
     </nav>

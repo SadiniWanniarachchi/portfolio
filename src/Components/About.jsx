@@ -1,22 +1,85 @@
-import React from 'react';
+import React from "react";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <section id="about" className="relative min-h-screen bg-black font-serif overflow-hidden">
-      {/* NightSky Background */}
-      
-      {/* Content Section */}
-      <div className="relative z-10 bg-white/10 backdrop-blur-md p-8 rounded-2xl shadow-xl border border-white/20 max-w-5xl mx-auto mt-24 sm:p-6 md:p-10">
-        <h2 className="text-4xl text-white text-center font-extrabold mb-12 mt-2 text-transparent bg-clip-text bg-gradient-to-r from-black to-[#310b58]">
-          About Me
-        </h2>
-        <p className="text-lg text-gray-300">
-          I'm a passionate frontend developer with experience in building modern and responsive websites. I specialize in creating efficient, scalable, and visually appealing user interfaces using React, Tailwind CSS, and other modern web technologies. With a keen eye for detail and a focus on user-centric design, I ensure that every project I work on delivers a seamless and engaging user experience.
-        </p>
-        <p className="text-lg text-gray-300 mt-4">
-          My technical expertise includes JavaScript, HTML, CSS, and responsive design principles, allowing me to craft websites that look great on any device. I have a strong foundation in state management, component-based architecture, and API integration, which helps me build dynamic, data-driven applications. I constantly stay updated with the latest trends in frontend development to bring the best solutions to my projects.
-        </p>
-      </div>
+    <section
+      id="about"
+      className="relative min-h-screen bg-[#0b1120] text-white font-serif flex items-center justify-center overflow-hidden"
+    >
+      {/* Section Title with Animation */}
+      <motion.h2
+        className="absolute top-10 justify-center text-5xl font-bold text-gray-200 tracking-wide"
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+        About Me
+      </motion.h2>
+
+      {/* Content Section with Scroll Animation */}
+      <motion.div
+        className="relative z-10 bg-white/10 backdrop-blur-md p-10 rounded-2xl shadow-xl border border-white/20 max-w-4xl mx-auto -mt-5"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false, amount: 0.25 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+      >
+        {/* Animated Paragraphs */}
+        <motion.p
+          className="text-lg text-gray-300 leading-relaxed mb-6"
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: false, amount: 0.25 }}
+          transition={{ delay: 0.3, duration: 0.6, ease: "easeOut" }}
+        >
+          🚀 Passionate frontend developer dedicated to crafting modern,
+          responsive, and immersive web experiences. I specialize in React,
+          Tailwind CSS, and intuitive UI/UX design. With a detail-oriented
+          mindset, I create sleek and efficient digital solutions. 🚀
+        </motion.p>
+
+        <motion.p
+          className="text-lg text-gray-300 leading-relaxed"
+          initial={{ opacity: 0, x: 20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: false, amount: 0.25 }}
+          transition={{ delay: 0.5, duration: 0.6, ease: "easeOut" }}
+        >
+          ✨ Skilled in JavaScript, component-based architecture, and API
+          integrations, I transform ideas into seamless digital experiences.
+          Constantly evolving with the latest frontend trends to bring
+          **cutting-edge** innovation to my work. ✨
+        </motion.p>
+
+        {/* Skills Section */}
+        <motion.div
+          className="flex flex-wrap justify-center gap-4 mt-8"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.25 }}
+          transition={{ delay: 0.6, duration: 0.6, ease: "easeOut" }}
+        >
+          {[
+            "React",
+            "JavaScript",
+            "Tailwind CSS",
+            "UX/UI Design",
+            "Node.js",
+          ].map((skill, index) => (
+            <span
+              key={index}
+              className="px-4 py-2 bg-white/10 text-gray-200 rounded-full text-sm border border-blue-500 shadow-md shadow-blue-500/20 transition-all duration-300 hover:bg-purple-500/20"
+            >
+              {skill}
+            </span>
+          ))}
+        </motion.div>
+      </motion.div>
+
+      {/* Background Elements */}
+      <div className="absolute top-1/4 left-10 w-32 h-32 bg-purple-400 opacity-20 blur-3xl rounded-full animate-pulse"></div>
+      <div className="absolute bottom-10 right-10 w-24 h-24 bg-blue-500 opacity-20 blur-3xl rounded-full animate-pulse"></div>
     </section>
   );
 };
