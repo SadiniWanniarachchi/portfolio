@@ -61,7 +61,7 @@ const Contact = () => {
             <div className="text-center">
               <button
                 type="submit"
-                className="px-6 py-3 bg-blue-500 text-white font-medium rounded-lg hover:bg-blue-600 transition-all duration-300"
+                className="px-6 py-3 bg-black text-white font-medium rounded-lg hover:bg-blue-500 transition-all duration-300"
               >
                 Send Message
               </button>
@@ -85,7 +85,7 @@ const Contact = () => {
           {/* Social Media Icons */}
           <div className="flex justify-center gap-10 text-3xl">
             <a
-              href="https://github.com/"
+              href="https://github.com/SadiniWanniarachchi"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-blue-500 transition-all duration-300"
@@ -93,7 +93,7 @@ const Contact = () => {
               <FaGithub />
             </a>
             <a
-              href="https://linkedin.com/"
+              href="https://www.linkedin.com/in/sadini-tharindi-wanniarachchi-3b0159258/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-blue-500 transition-all duration-300"
@@ -102,11 +102,11 @@ const Contact = () => {
             </a>
 
             <a
-              href="mailto:your-email@example.com"
-              className="text-gray-400 hover:text-blue-500 transition-all duration-300"
-            >
-              <FaEnvelope />
-            </a>
+  href="mailto:onlinesadini@gmail.com"
+  className="text-gray-400 hover:text-blue-500 transition-all duration-300"
+>
+  <FaEnvelope />
+</a>
           </div>
 
           {/* Copyright */}

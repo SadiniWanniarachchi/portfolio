@@ -7,41 +7,53 @@ import SmoothieImg from "../assets/smoothie.png";
 import FemmeFitImg from "../assets/femmefit.png";
 
 const projects = [
-  {
-    name: "FLICK",
-    img: FlickImg,
-    description:
-      "FLICK is a To-Do List app built using Kotlin and Room DB, featuring task management and reminder functions.",
-    link: "https://github.com/SadiniWanniarachchi/To-Do-App"
-  },
-  {
-    name: "CAFFEENA",
-    img: CaffeenaImg,
-    description:
-      "CAFFEENA is a coffee shop website developed using HTML, CSS, and JavaScript, offering a clean, modern UI.",
-    link: "https://caffeena.netlify.app/"
-  },
+
   {
     name: "HARVESTBREW",
     img: HarvestBrewImg,
     description:
       "HARVESTBREW is a website for a tea shop built with React and Tailwind CSS, focusing on user-friendly navigation and aesthetic design.",
+    skills: ["React + Vite", "Tailwind CSS"],
     link: "https://harvestbrew.netlify.app/"
   },
-  {
-    name: "SMOOTHIE",
-    img: SmoothieImg,
-    description:
-      "SMOOTHIE is a smoothie shop mobile app UI design using a light purple theme to attract users.",
-    link: "https://github.com/SadiniWanniarachchi/Smoothie-Mobile-App"
-  },
+
   {
     name: "FEMMEFIT",
     img: FemmeFitImg,
     description:
       "FEMMEFIT is a modern trending women's fashion website built with React and Tailwind CSS.",
+    skills: ["React + Vite", "Tailwind CSS"],
     link: "https://femmefitclothing.netlify.app/"
-  }
+  },
+
+  {
+    name: "CAFFEENA",
+    img: CaffeenaImg,
+    description:
+      "CAFFEENA is a coffee shop website developed using HTML, CSS, and JavaScript, offering a clean, modern UI.",
+    skills: ["HTML", "CSS", "JavaScript"],
+    link: "https://caffeena.netlify.app/"
+  },
+
+  {
+    name: "FLICK",
+    img: FlickImg,
+    description:
+      "FLICK is a To-Do List app built using Kotlin and Room DB, featuring task management and reminder functions.",
+    skills: ["Kotlin", "Room DB"],
+    link: "https://github.com/SadiniWanniarachchi/To-Do-App"
+  },
+  
+ 
+  {
+    name: "SMOOTHIE",
+    img: SmoothieImg,
+    description:
+      "SMOOTHIE is a smoothie shop mobile app UI design using a light purple theme to attract users.",
+    skills: ["Kotlin","Figma"],
+    link: "https://github.com/SadiniWanniarachchi/Smoothie-Mobile-App"
+  },
+  
 ];
 
 const Projects = () => {
@@ -97,6 +109,11 @@ const Projects = () => {
               </h3>
               {/* Description */}
               <p className="text-gray-300 text-sm mb-3">{project.description}</p>
+
+              {/* Skills (Displayed as Simple Text with Blue Color) */}
+              <div className="text-blue-500 text-base font-semibold mt-2">
+               {project.skills.join(", ")}
+              </div>
             </a>
           </motion.div>
         ))}

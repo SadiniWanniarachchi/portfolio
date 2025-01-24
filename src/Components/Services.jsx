@@ -31,7 +31,7 @@ const Services = () => {
             Icon: FaMobileAlt,
             title: "Mobile Development",
             description:
-              "Creating cross-platform mobile applications for Android and iOS.",
+              "Creating mobile applications for Android using Kotlin and react.",
           },
           {
             Icon: FaLaptopCode,

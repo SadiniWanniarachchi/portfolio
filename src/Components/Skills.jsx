@@ -10,13 +10,13 @@ import {
   FaPython,
   FaNodeJs,
 } from "react-icons/fa";
-import { SiKotlin, SiTailwindcss, SiMongodb, SiExpress } from "react-icons/si";
+import { SiKotlin, SiTailwindcss, SiMongodb, SiExpress, SiMysql } from "react-icons/si";
 import { TbVector } from "react-icons/tb"; // UX/UI Designing Icon
 
 const skills = [
   { name: "MongoDB", icon: <SiMongodb className="text-green-500" /> },
   { name: "Express.js", icon: <SiExpress className="text-gray-300" /> },
-  { name: "React", icon: <FaReact className="text-blue-600" /> },
+  { name: "React", icon: <FaReact className="text-blue-400" /> },
   { name: "Node.js", icon: <FaNodeJs className="text-green-500" /> },
   { name: "JavaScript", icon: <FaJs className="text-yellow-500" /> },
   { name: "HTML", icon: <FaHtml5 className="text-orange-500" /> },
@@ -25,8 +25,10 @@ const skills = [
   { name: "Android Studio", icon: <FaAndroid className="text-green-600" /> },
   { name: "Kotlin", icon: <SiKotlin className="text-purple-600" /> },
   { name: "Python", icon: <FaPython className="text-blue-500" /> },
+  { name: "MySQL", icon: <SiMysql className="text-blue-700" /> },
   { name: "Figma", icon: <FaFigma className="text-purple-600" /> },
   { name: "UX/UI Designing", icon: <TbVector className="text-pink-500" /> },
+  
 ];
 
 const Skills = () => {
