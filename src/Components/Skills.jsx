@@ -7,24 +7,29 @@ import {
   FaReact,
   FaFigma,
   FaAndroid,
+  FaPython,
+  FaNodeJs,
 } from "react-icons/fa";
-import { SiKotlin, SiTailwindcss } from "react-icons/si";
+import { SiKotlin, SiTailwindcss, SiMongodb, SiExpress } from "react-icons/si";
 import { TbVector } from "react-icons/tb"; // UX/UI Designing Icon
 
 const skills = [
+  { name: "MongoDB", icon: <SiMongodb className="text-green-500" /> },
+  { name: "Express.js", icon: <SiExpress className="text-gray-300" /> },
+  { name: "React", icon: <FaReact className="text-blue-600" /> },
+  { name: "Node.js", icon: <FaNodeJs className="text-green-500" /> },
+  { name: "JavaScript", icon: <FaJs className="text-yellow-500" /> },
   { name: "HTML", icon: <FaHtml5 className="text-orange-500" /> },
   { name: "CSS", icon: <FaCss3Alt className="text-blue-500" /> },
-  { name: "JavaScript", icon: <FaJs className="text-yellow-500" /> },
-  { name: "React", icon: <FaReact className="text-blue-600" /> },
-  { name: "Figma", icon: <FaFigma className="text-purple-600" /> },
+  { name: "TailwindCSS", icon: <SiTailwindcss className="text-teal-400" /> },
   { name: "Android Studio", icon: <FaAndroid className="text-green-600" /> },
   { name: "Kotlin", icon: <SiKotlin className="text-purple-600" /> },
-  { name: "TailwindCSS", icon: <SiTailwindcss className="text-teal-400" /> },
+  { name: "Python", icon: <FaPython className="text-blue-500" /> },
+  { name: "Figma", icon: <FaFigma className="text-purple-600" /> },
   { name: "UX/UI Designing", icon: <TbVector className="text-pink-500" /> },
 ];
 
 const Skills = () => {
-  // Animation Variants
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -34,8 +39,8 @@ const Skills = () => {
   };
 
   const cardVariants = {
-    hidden: { opacity: 0, scale: 0.8, rotateY: 90 }, // Cards start with rotation and scale
-    visible: { opacity: 1, scale: 1, rotateY: 0 }, // Cards become fully visible
+    hidden: { opacity: 0, scale: 0.8, rotateY: 90 },
+    visible: { opacity: 1, scale: 1, rotateY: 0 },
   };
 
   return (
@@ -43,12 +48,10 @@ const Skills = () => {
       id="skills"
       className="relative bg-[#0b1120] text-white py-20 px-4 font-serif overflow-hidden"
     >
-      {/* Background Elements */}
       <div className="absolute top-1/4 left-20 w-40 h-40 bg-green-500 opacity-20 blur-3xl rounded-full animate-pulse"></div>
       <div className="absolute bottom-10 right-20 w-32 h-32 bg-yellow-500 opacity-20 blur-3xl rounded-full animate-pulse"></div>
       <div className="absolute top-10 right-40 w-24 h-24 bg-red-500 opacity-20 blur-3xl rounded-full animate-pulse"></div>
 
-      {/* Section Title with Animation */}
       <motion.h2
         className="text-5xl sm:text-5xl font-bold text-center text-white mb-12"
         initial={{ opacity: 0, y: 30 }}
@@ -59,13 +62,12 @@ const Skills = () => {
         Skills
       </motion.h2>
 
-      {/* Skills Grid with Animated Cards */}
       <motion.div
         className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-6xl mx-auto relative z-10"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false, amount: 0.3 }} // Re-animates when scrolling up and down
+        viewport={{ once: false, amount: 0.3 }}
       >
         {skills.map((skill, index) => (
           <motion.div
@@ -78,17 +80,12 @@ const Skills = () => {
               damping: 15,
             }}
           >
-            {/* Skill Icon */}
             <div className="text-5xl sm:text-6xl mb-4 group-hover:text-white">
-              {skill.icon}
+              {skill.icon || <span className="text-red-500">⚠️</span>}
             </div>
-
-            {/* Skill Name */}
             <p className="text-sm sm:text-lg font-bold text-white group-hover:text-gray-300">
               {skill.name}
             </p>
-
-            {/* Hover Overlay */}
             <div className="absolute inset-0 bg-blue-600 opacity-0 group-hover:opacity-10 rounded-2xl"></div>
           </motion.div>
         ))}
