@@ -72,18 +72,13 @@ const Hero = () => {
 
           {/* Buttons */}
           <div className="flex gap-4 mt-6">
-            <a
-              href="#projects"
-              className="px-6 py-3 bg-black rounded-md hover:bg-blue-500"
-            >
-              Projects
-            </a>
-            <a
-              href="#contact"
-              className="px-6 py-3 bg-black rounded-md hover:bg-blue-500 flex items-center gap-2"
-            >
-              Contact
-            </a>
+          <a
+             href="/Sadini_Wanniarachchi.pdf" // Path to your resume
+             download="Sadini_Wanniarachchi_Resume.pdf" // Suggested file name
+             className="px-6 py-3 bg-black rounded-md hover:bg-blue-500"
+          >
+              My Resume
+           </a>
           </div>
         </div>
       </section>

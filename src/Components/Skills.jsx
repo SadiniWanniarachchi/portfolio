@@ -41,11 +41,16 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="bg-[#0b1120] text-white py-20 px-4 font-serif"
+      className="relative bg-[#0b1120] text-white py-20 px-4 font-serif overflow-hidden"
     >
+      {/* Background Elements */}
+      <div className="absolute top-1/4 left-20 w-40 h-40 bg-green-500 opacity-20 blur-3xl rounded-full animate-pulse"></div>
+      <div className="absolute bottom-10 right-20 w-32 h-32 bg-yellow-500 opacity-20 blur-3xl rounded-full animate-pulse"></div>
+      <div className="absolute top-10 right-40 w-24 h-24 bg-red-500 opacity-20 blur-3xl rounded-full animate-pulse"></div>
+
       {/* Section Title with Animation */}
       <motion.h2
-        className="text-3xl sm:text-5xl font-bold text-center text-white mb-12"
+        className="text-5xl sm:text-5xl font-bold text-center text-white mb-12"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
@@ -56,7 +61,7 @@ const Skills = () => {
 
       {/* Skills Grid with Animated Cards */}
       <motion.div
-        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-6xl mx-auto"
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-6xl mx-auto relative z-10"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
@@ -84,7 +89,7 @@ const Skills = () => {
             </p>
 
             {/* Hover Overlay */}
-            <div className="absolute inset-0 bg-purple-800 opacity-0 group-hover:opacity-10 rounded-2xl"></div>
+            <div className="absolute inset-0 bg-blue-600 opacity-0 group-hover:opacity-10 rounded-2xl"></div>
           </motion.div>
         ))}
       </motion.div>

@@ -48,8 +48,12 @@ const Projects = () => {
   return (
     <div
       id="projects"
-      className="bg-[#0b1120] text-white py-20 px-5 font-serif"
+      className="relative bg-[#0b1120] text-white py-20 px-5 font-serif overflow-hidden"
     >
+      {/* Background Elements */}
+      <div className="absolute top-1/4 left-10 w-32 h-32 bg-purple-400 opacity-20 blur-3xl rounded-full animate-pulse"></div>
+      <div className="absolute bottom-10 right-10 w-24 h-24 bg-blue-500 opacity-20 blur-3xl rounded-full animate-pulse"></div>
+
       {/* Section Title with Animation */}
       <motion.h2
         className="text-center text-5xl font-bold mb-16"
@@ -62,7 +66,7 @@ const Projects = () => {
       </motion.h2>
 
       {/* Project Cards with Scroll Animation */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto relative z-10">
         {projects.map((project, index) => (
           <motion.div
             key={index}
